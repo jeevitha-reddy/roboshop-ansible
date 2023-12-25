@@ -13,7 +13,7 @@
       state: present
 
   - name: start and enable mongodb
-    ansible.buitin.service:
+    ansible.builtin.service:
       name: mongodb
       state: started
       enabled: yes
@@ -25,7 +25,7 @@
     replace: '0.0.0.0'
 
   - name: start and enable mongodb
-    ansible.buitin.service:
+    ansible.builtin.service:
       name: mongodb
       state: started
       enabled: restarted  
