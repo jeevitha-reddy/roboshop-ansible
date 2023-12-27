@@ -34,10 +34,12 @@
       src: /tmp/user.zip
       dest: /app
       remote_src: yes
-      
-  - name: install dependencies
+ 
+  - name: Install dependencies
     ansible.builtin.command: npm install
-
+    args:
+      chdir: /app
+  
   - name: Copy user service
     ansible.builtin.copy:
       src: user.service
